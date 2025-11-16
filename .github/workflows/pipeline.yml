@@ -35,3 +35,6 @@ jobs:
         working-directory: ./2.17.puhelinluettelo
       - name: E2 Tests
         run: npm run test
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          PORT: ${{ secrets.PORT }}
