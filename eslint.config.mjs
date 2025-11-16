@@ -4,6 +4,15 @@ import stylisticJs from "@stylistic/eslint-plugin-js";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  {
+    ignores: [
+      "node_modules/**",
+      "dist/**",
+      "tests/**",
+      "**.config.js",
+      "2.17.puhelinluettelo/**",
+    ],
+  },
   js.configs.recommended,
   {
     files: ["**/*.js"],
@@ -24,6 +33,5 @@ export default [
       "@stylistic/js/quotes": ["error", "single"],
       "@stylistic/js/semi": ["error", "never"],
     },
-    ignores: ["dist/**", "tests/**"],
   },
 ];
