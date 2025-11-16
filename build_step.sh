@@ -7,5 +7,4 @@ npm install
 npm run build
 cp -r dist ..
 cd ..
-npm run build
 echo "Build complete"
