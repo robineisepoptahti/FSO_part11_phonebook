@@ -40,4 +40,4 @@ jobs:
           PORT: ${{ secrets.PORT }}
       - name: Trigger deployment
         if: ${{env.CONDITION != 'true' &&  github.event_name == 'push' }}
-        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
